@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <!-- Calculator Container -->
+    <div id="calculator">
+      <!-- Calculator Form -->
+      <form id="calculatorForm">
+        <!-- Number 1 Input -->
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter number" required />
+
+        <!-- Operator Selection -->
+        <div id="operator">
+          Operator:
+          <select id="operatorSelect" required>
+            <option value="" disabled selected>Select operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+        </div>
+
+        <!-- Number 2 Input -->
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" placeholder="Enter number" required />
+
+        <!-- Calculate and Clear Buttons -->
+        <button type="button" onclick="calculate()">Calculate</button>
+        <button type="button" onclick="clearCalculator()">Clear</button>
+
+        <!-- Expression Display -->
+        <div id="expression">
+          Expression: <input type="text" id="expressionBox" disabled />
+        </div>
+
+        <!-- Result Display -->
+        <div id="result">
+          Result: <input type="text" id="resultBox" disabled />
+        </div>
+      </form>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script src="calculator.js"></script>
+  </body>
+</html>
